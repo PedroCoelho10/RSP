@@ -1,6 +1,8 @@
 <template>
    
   <v-row>
+    
+    
     <v-col class="colunas"
           cols="12"
             sm="10"
@@ -8,16 +10,17 @@
           >
             
       
-        <ul>
-            <li> <a href="#"> SOBRE O RSP</a></li>
-            <li> <a href="#" > ÁREA DO PROFISSIONAL </a></li>
-            <li> <a href="#"> HELP</a></li>
-            <li>  <a href="#">DOWNLOAD</a></li>
-        </ul>
+        <div class="but">
+                <v-btn rounded dark>
+                    <router-link class="npm" to="/HOMEPAGE"> HOME</router-link> 
+                </v-btn>
+            </div>
+          
+        
         
         <h1> CADASTRE-SE</h1>
        
-        <v-text-field
+        <v-text-field class="txt"
           placeholder="Nome Completo"
           filled
           rounded
@@ -25,7 +28,7 @@
         ></v-text-field>
             
         <v-text-field
-          placeholder="Código do profissional"
+          placeholder="CPF"
           filled
           rounded
           dense
@@ -46,37 +49,42 @@
         ></v-text-field>
               
         <v-text-field
-          placeholder="Confirmação da senha"
+          placeholder="Confirmação de senha"
           filled
           rounded
           dense
         ></v-text-field>
           
+         
       <div class="but">
         <v-btn
           rounded
           color="primary"
           dark
         >
-        <router-link to="/CadastroP"> CADASTRO </router-link>
-        
+          CADASTRAR
         </v-btn>
+      
+      
       </div>
-    
+      
     </v-col>
+    
     <v-col>
         <div class="esquerdo">
           <h2>Bem Vindos ao RSP</h2>
           <h3><p>Ja tem uma conta?<a href="#">Acesse aqui!</a></p></h3>
         </div> 
     </v-col>
+ 
   </v-row>
+
 </template>
 
 <script>
-  export default {
-   
-  }
+  
+
+
 </script>
 
 <style scoped>
@@ -116,6 +124,7 @@ h1{
   font-size: 24px;
   color: #706B6B;
   font-family: Poppins;
+  margin-top: 50px;
 }
 
 .but{
@@ -134,4 +143,15 @@ h3{
   font-size: 12px;
 }
 
+.txt{
+  margin-top: 30px;
+}
+
+.npm{
+  color: white
+}
+
+.but{
+  margin-right:  100px;
+}
 </style>

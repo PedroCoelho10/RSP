@@ -1,13 +1,7 @@
 import axios from 'axios';
 
 export const http = axios.create({
-    baseURL: 'https://localhost:5001/'
+    baseURL: 'https://localhost:5001/api/'
 })
 
- module.exports = {
-    devServer: {
-      proxy: 'https://localhost:5001'
-    }
-  }
 
-  
